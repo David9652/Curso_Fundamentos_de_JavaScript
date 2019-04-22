@@ -1,10 +1,19 @@
 var nombre = "David";
 var apellido = "Angel"
-var edad = 23
-console.log('Hola '+ nombre + " " + apellido);
-console.log('Tengo ' + edad + " años");
-/*
-var = Una variable global
-const = Una varible que no se puede cambiar su contenido
-let = Palabra reservada que permite declarar variables, limitando su alcance
-*/
+var nombreCompleto = `${nombre} ${apellido}`
+
+var nombreMayusculas = nombre.toUpperCase()
+var apellidoMinuscula = apellido.toLowerCase()
+
+var primerLetra =nombre.charAt(0)
+
+var cantidad = nombre.length
+
+var str = nombre.substr(1,2)
+
+console.log(str)
+
+/********* DESAFÍO *********/
+
+var nombreUsuario = "Andrés"
+var ultimaLetra = nombreUsuario.charAt(nombreUsuario.length - 1)
