@@ -11,43 +11,43 @@ var johnny = {
 }
 
 function imprimirProfesiones(persona){
-  console.log(`${persona.nombre}`)
+    console.log(`${persona.nombre}`)
 
-  if (persona.ingeniero) {
-    console.log('es: Ingeniero')
-  } else {
-    console.log('No es Ingeniero')
-  }
+    if (persona.ingeniero) {
+        console.log('es: Ingeniero')
+    } else {
+        console.log('No es Ingeniero')
+    }
 
-  if (persona.cosinero) {
-    console.log('es: Cosinero')
-  } else {
-    console.log('No es Cosinero')
-  }
+    if (persona.cosinero) {
+        console.log('es: Cocinero')
+    } else {
+        console.log('No es Cocinero')
+    }
 
-  if (persona.cantante) {
-    console.log('es: Cantante')
-  } else {
-    console.log('No es Cantante')
-  }
+    if (persona.cantante) {
+        console.log('es: Cantante')
+    } else {
+        console.log('No es Cantante')
+    }
 
-  if (persona.dj) {
-    console.log('es: Dj')
-  } else {
-    console.log('No es Dj')
-  }
+    if (persona.dj) {
+        console.log('es: Dj')
+    } else {
+        console.log('No es Dj')
+    }
 
-  if (persona.guitarista) {
-    console.log('es: Guitarista')
-  } else {
-    console.log('No es Guitarista')
-  }
+    if (persona.guitarista) {
+        console.log('es: Guitarrista')
+    } else {
+        console.log('No es Guitarrista')
+    }
 
-  if (persona.drone) {
-    console.log('es: Piloto de Drone')
-  } else {
-    console.log('No pilotea drones')
-  }
+    if (persona.drone) {
+        console.log('es: Piloto de Drone')
+    } else {
+        console.log('No pilotea drones')
+    }
 }
 
 imprimirProfesiones(johnny)
@@ -64,12 +64,13 @@ const esMayorDeEdad = persona => persona.edad >= MAYOR_EDAD
 */
 
 const esMayorDeEdad = ({edad}) => edad >= MAYOR_EDAD
+const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
 
 function imprimirSiEsMayorDeEdad(persona){
     console.log(`${persona.nombre} tiene ${persona.edad},`)
   
     if (esMayorDeEdad(persona)) {
-      console.log('es mayor de edad')
+        console.log('es mayor de edad')
     }
     else{
         console.log('es menor de edad')
@@ -77,7 +78,7 @@ function imprimirSiEsMayorDeEdad(persona){
   }
   
 function permitirAcceso (persona){
-    if(!esMayorDeEdad(persona)){
+    if(esMenosDeEdad(persona)){
         console.log("ACCESO DENEGADO")
     }
 }
