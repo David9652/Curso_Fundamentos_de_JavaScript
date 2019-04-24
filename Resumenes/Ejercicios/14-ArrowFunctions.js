@@ -64,7 +64,7 @@ const esMayorDeEdad = persona => persona.edad >= MAYOR_EDAD
 */
 
 const esMayorDeEdad = ({edad}) => edad >= MAYOR_EDAD
-const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
+const permitirAcceso = ({edad}) => !esMayorDeEdad({edad}) ? console.log("ACCESO DENEGADO") : console.log("ACCESO PERMITIDO")
 
 function imprimirSiEsMayorDeEdad(persona){
     console.log(`${persona.nombre} tiene ${persona.edad},`)
@@ -76,12 +76,6 @@ function imprimirSiEsMayorDeEdad(persona){
         console.log('es menor de edad')
     }
   }
-  
-function permitirAcceso (persona){
-    if(esMenosDeEdad(persona)){
-        console.log("ACCESO DENEGADO")
-    }
-}
 
 imprimirSiEsMayorDeEdad(johnny)
 permitirAcceso(johnny)
