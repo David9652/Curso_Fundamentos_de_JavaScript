@@ -16,3 +16,18 @@ Persona.prototype.soyAlto = function() {
 var david = new Persona("David","Ángel",1.77)
 david.saludar()
 david.soyAlto()
+
+/*
+Window es el objeto global dentro del navegador.
+
+El principal error en JS es Cuando this no es lo que esperamos.
+
+En las Arrow functions, se asigna la función, pero cambia el this dentro de la función, ya que trata de tomar el this global, es decir, el que está fuera de la Arrow function.
+
+Para comprobarlo en consola:
+
+this === window
+
+Tanto Arrow Functions como lLambdas carecen de referencia this
+
+*/
