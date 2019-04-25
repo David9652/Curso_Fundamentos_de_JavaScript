@@ -1,8 +1,9 @@
 // Creación de un Prototipo
-function Persona(nombre,apellido,edad){
+function Persona(nombre,apellido,edad,altura){
     this.nombre = nombre
     this.apellido = apellido
     this.edad = edad
+    this.altura = altura 
     console.log(`Mi edad es ${this.edad}`)
 }
 
@@ -10,9 +11,17 @@ Persona.prototype.saludar = function(){
     console.log(`Hola, me llamo ${this.nombre} ${this.apellido}` )
 }
 
+Persona.prototype.soyAlto = function () {
+    if(this.altura > 1.75){
+        console.log("Soy muy alto")
+    }
+    
+}
+
 // Utilizando new se crea un nuevo objeto, de lo contrario, haría un llamado a la función
-var david = new Persona("David","Ángel",23)
+var david = new Persona("David","Ángel",23,1.77)
 david.saludar()
+david.soyAlto()
 
 var daniel = {
     nombre: "Daniel",
