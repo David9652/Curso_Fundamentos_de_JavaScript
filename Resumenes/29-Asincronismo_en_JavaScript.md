@@ -1,4 +1,4 @@
-# Sesión 29 - Asincronismo en JavaScript
+# Sesión 29 - Asincronía en JavaScript
 
 * JavaScript es asíncrono y concurrente 
 
@@ -21,3 +21,4 @@
 * [Call Stack en JavaScript](https://www.youtube.com/watch?v=FzFFTYbYvcw "Call Stack en JavaScript"). 
 * [Asincronía en JavaScript](https://www.youtube.com/watch?v=PndHsDpEfhU "Asincronía en JavaScript").
 * [Event Loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1232s "Event Loop").
+* [Herramienta Event Loop](http://latentflip.com/loupe/ "Herramienta Event Loop").
