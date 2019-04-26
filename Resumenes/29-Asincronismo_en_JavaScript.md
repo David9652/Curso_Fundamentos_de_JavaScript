@@ -10,7 +10,7 @@
 
 * **Paralelismo** hace referencia que se ejecutan múltiples tareas simultáneamente.
 
-* **Call Stack** &rarr Espacio donde se colocan el llamado a las funciones según el orden de ejecucíon de nuestro programa (funciona como una cola FILO).
+* **Call Stack** &rarr; Espacio donde se colocan el llamado a las funciones según el orden de ejecucíon de nuestro programa (funciona como una cola FILO).
 
 * **CallBack** &rarr; Función que se ejecutará en un futuro cuando la respuesta del servidor llegue.
 
