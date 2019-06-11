@@ -14,16 +14,13 @@ function asyncFunction2() {
     }
 )}
 
-let promise = asyncFunction();
-
-let promise2 = promise.then(function(val){
+asyncFunction()
+.then(function(val){
     console.log(`Yeah! ${val}`)
     return asyncFunction2()
 })
-
-promise2.then(function(val){
+.then(function(val){
     console.log(`Second Promise! ${val}`)
 })
 
 console.log("The code is Asynchronous.")
-
