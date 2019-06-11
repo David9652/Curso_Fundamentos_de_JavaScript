@@ -3,7 +3,7 @@ function HeredaDe(childPrototype, fatherPrototype){
     var fn = function () {}
     fn.prototype = fatherPrototype.prototype
     childPrototype.prototype = new fn()
-    childPrototype.prototype.contructor = childPrototype
+    childPrototype.prototype.constructor = childPrototype
 }
 
 // Declaración de un Prototipo Persona
@@ -28,7 +28,7 @@ function Desarrollador(nombre,apellido){
     this.apellido = apellido
 }
 
-// LlamadoFunción Herencia Prototipal
+// Llamado Función Herencia Prototipal
 HeredaDe(Desarrollador,Persona)
 
 // Modificación Prototipo Desarrollador
