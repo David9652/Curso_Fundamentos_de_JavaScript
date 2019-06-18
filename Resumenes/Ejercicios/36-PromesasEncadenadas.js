@@ -5,6 +5,7 @@ Polyfills --> https://stackoverflow.com/questions/7087331/what-is-the-meaning-of
 */
 
 const API_URL = 'https://swapi.co/api/'
+debugger
 const PEOPLE_URL = 'people/:id'
 const OPTS = { crossDomain: true }
 
@@ -57,4 +58,16 @@ Como menciona Sacha en la clase anterior. La forma de obtener el valor de una pr
 Esta función anónima tiene su propio alcance delimitado por las llaves “{ }”. Así como la función obtener personaje tiene su propio alcance, delimitado por sus llaves “{ }”.
 El return de obtenerpersonaje envía la promesa a la función anónima. El return de la función anónima la envía al siguiente .then(). Y así sucesivamente hasta llegar al último .then().
 
-*/
+.then(personaje =>
+{
+	return obtenerpersonaje(id)
+	{
+		//CODE
+		/*hasta aquí llega el alcance de obtenerpersonaje.*/
+		//return promesa;
+		/*Con el return enviamos la promesa un nivel arriba del alcance de esta función. Es decir la enviamos a la función anonima de ESTE then, pero no al siguiente*/
+	//} 
+	
+/*La función anonima recibe la promesa de obtenerpersonaje pero tenemos que enviarla al siguiente .then por eso colocamos el return */
+
+//} 
