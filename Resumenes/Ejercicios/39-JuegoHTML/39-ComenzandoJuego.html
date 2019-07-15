@@ -91,27 +91,68 @@
             constructor(){
                 this.inicializar();
                 this.generarSecuencia();
+                this.siguienteNivel();
             }
             inicializar(){
                 btnEmpezar.classList.add("hide")
-                this.nivel = 1;
+                this.nivel = 5;
                 this.colores ={
-                    celeste,
-                    violeta,
-                    naranja,
-                    verde
+                    celeste : celeste,
+                    violeta : violeta,
+                    naranja: naranja,
+                    verde: verde
                 }
+                /*
+                    this.colores ={
+                        celeste,
+                        violeta,
+                        naranja,
+                        verde
+                    }
+                    */
             }
             generarSecuencia(){
                 this.secuencia = new Array(10)
                 .fill(0)
                 .map(n => Math.floor(Math.random()*4))    
             }
+            siguienteNivel(){
+                this.iluminarSecuencia();
+                this.nivel++;
+            }
+            iluminarSecuencia(){
+                for (let index = 0; index < this.nivel; index++) {
+                    debugger
+                    let color = this.transformarNumeroAColor(this.secuencia[index]);
+                    console.log(color)
+                    setTimeout( () => this.iluminarColor(color), 1000 * index);   
+                }
+            }
+            transformarNumeroAColor(num){
+                switch (num) {
+                    case 0:
+                        return 'celeste'
+                    case 1:
+                        return 'violeta'
+                    case 2:
+                        return 'naranja'
+                    case 3:
+                        return 'verde'
+                }
+            }
+            iluminarColor(color){
+                this.colores[color].classList.add("light");
+                setTimeout( () => this.apagarColor(color),350);
+            }
+
+            apagarColor(color){
+                this.colores[color].classList.remove("light")
+            }
+
         }
 
         function empezarJuego(e) {
-            alert("El juego ha comenzado");
-            window.juego = new Juego()
+            juego = new Juego()
         }
 
     </script>
