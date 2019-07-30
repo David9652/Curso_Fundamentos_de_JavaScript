@@ -95,7 +95,7 @@
             }
             inicializar(){
                 btnEmpezar.classList.add("hide")
-                this.nivel = 5;
+                this.nivel = 10;
                 this.colores ={
                     celeste : celeste,
                     violeta : violeta,
@@ -118,6 +118,7 @@
             }
             siguienteNivel(){
                 this.iluminarSecuencia();
+                this.agregarEventosClick();
                 this.nivel++;
             }
             iluminarSecuencia(){
@@ -147,6 +148,19 @@
 
             apagarColor(color){
                 this.colores[color].classList.remove("light")
+            }
+
+            agregarEventosClick(){
+              var self = this
+              this.colores.celeste.addEventListener("click",this.elegirColor.bind(self))
+              this.colores.violeta.addEventListener("click",this.elegirColor.bind(self))
+              this.colores.naranja.addEventListener("click",this.elegirColor.bind(self))
+              this.colores.verde.addEventListener("click",this.elegirColor.bind(self))
+            }
+
+            elegirColor(e){
+              console.log(e)
+              console.log(this)
             }
 
         }
